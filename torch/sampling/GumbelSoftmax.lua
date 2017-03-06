@@ -54,7 +54,7 @@ do
 		local addition = {input, noise} - nn.CAddTable() 
 		local y = {addition, temperature} - nn.CDivTable()
 		local output = y - nn.SoftMax()
-		return nn.gModule({input, noise}, {output})
+		return nn.gModule({input, noise, temperature}, {output})
 	end	
 
 end
